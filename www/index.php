@@ -10,13 +10,13 @@
             <?php
                 echo "<h1>¡Hola, Antonio te da la bienvenida!</h1>";
 
-                $conn = mysqli_connect('db', 'root', 'test', "dbname");
+                $conn = mysqli_connect('db', 'root', 'root', "facturas_db");
 
-                $query = 'SELECT * From Person';
+                $query = 'SELECT * From Uso_CFDI';
                 $result = mysqli_query($conn, $query);
 
                 echo '<table class="table table-striped">';
-                echo '<thead><tr><th></th><th>id</th><th>name</th></tr></thead>';
+                echo '<thead><tr><th></th><th>id</th><th>uso</th></tr></thead>';
                 while($value = $result->fetch_array(MYSQLI_ASSOC)){
                     echo '<tr>';
                     echo '<td><a href="#"><span class="glyphicon glyphicon-search"></span></a></td>';
